@@ -16,6 +16,7 @@
 
 from ...coresight.coresight_target import CoreSightTarget
 from ..family import target_kinetis
+from . import target_csk6
 from . import target_MIMXRT1011xxxxx
 from . import target_MIMXRT1015xxxxx
 from . import target_MIMXRT1021xxxxx
@@ -130,6 +131,7 @@ from . import target_ytm32b1me0
 #   instead of dashes punctuation. See pyocd.target.normalise_target_type_name() for the code that
 #   normalises user-provided target type names for comparison with these.
 BUILTIN_TARGETS = {
+          'csk6001' : target_csk6.CSK6,
           'mps3_an522': target_MPS3_AN522.AN522,
           'mps3_an540': target_MPS3_AN540.AN540,
           'cortex_m': CoreSightTarget,
